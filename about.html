@@ -2,12 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=travel_recommendation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>TravelBloom</title>
-
-  <style>
+<style>
     :root {
       --nav-bg: rgba(20, 30, 30, 0.85);
       --panel: rgba(255, 255, 255, 0.12);
@@ -420,126 +417,54 @@
     }
   </style>
 </head>
-
-<body data-page="home">
-  <!-- Task 2: Navbar -->
+<body data-page="about">
   <div class="navbar">
     <div class="nav-inner">
-        <a class="brand" href="travel_recommendation.html" id="navHomeBrand">
-
+      <a class="brand" href="travel_recommendation.html">
+        <span class="logo" aria-hidden="true"></span>
+        TravelBloom
+      </a>
 
       <nav class="nav-links">
         <a href="travel_recommendation.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
       </nav>
-
-      <!-- search appears only on Home (hidden on About/Contact by CSS) -->
-      <div class="nav-search">
-        <div class="search-wrap">
-          <input id="searchInput" type="text" placeholder="Enter a destination or keyword" />
-          <span class="icon">🔍</span>
-        </div>
-        <button class="btn btn-primary" id="searchBtn" type="button">Search</button>
-        <button class="btn btn-ghost" id="clearBtn" type="button">Clear</button>
-      </div>
     </div>
   </div>
 
-  <!-- Social media links (content section requirement) -->
-  <div class="social" aria-label="Social links">
-    <a href="#" title="Twitter">t</a>
-    <a href="#" title="Facebook">f</a>
-    <a href="#" title="Instagram">◎</a>
-    <a href="#" title="YouTube">▶</a>
-  </div>
-
   <div class="container">
-    <!-- Task 3: Home -->
-    <section id="home" class="active">
-      <div class="home-grid">
-        <div class="hero">
-          <h1>Explore<br/>Dream<br/>Destination</h1>
-          <p>
-            It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes,
-            while pursuing the desired destination that captivates the heart and ignites a sense of wonder.
-          </p>
-          <button class="book-now" type="button">BOOK NOW</button>
+    <h1 class="about-title">About Us</h1>
+
+    <div class="panel">
+      <p class="about-text">
+        Welcome to our company! We are a team of passionate individuals dedicated to providing excellent travel
+        recommendations to help you discover destinations around the world. Our mission is to make exploration easy,
+        inspiring, and memorable.
+      </p>
+    </div>
+
+    <div class="panel" style="margin-top: 16px;">
+      <h2 style="margin:0 0 10px; font-weight: 900;">Our Team</h2>
+
+      <div class="team">
+        <div class="member">
+          <p class="name">John Doe</p>
+          <p class="about-text">Responsible for overall company direction and strategy.</p>
+          <span class="role">CEO</span>
         </div>
-
-        <!-- Task 6/8: Recommendation results panel -->
-        <aside class="results-panel" aria-label="Recommendation Results">
-          <div class="results-header">
-            <span>Recommendations</span>
-            <small id="resultCount">0 results</small>
-          </div>
-          <div class="results-body">
-            <div class="msg" id="messageBox">Please enter a valid search query.</div>
-            <div id="results"></div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Task 4: About Us (navbar here must NOT include search; we hide it via CSS when this section active) -->
-    <section id="about">
-      <h1 class="about-title">About Us</h1>
-
-      <div class="panel">
-        <p class="about-text">
-          Welcome to our company! We are a team of passionate individuals dedicated to providing excellent travel
-          recommendations to help you discover destinations around the world. Our mission is to make exploration easy,
-          inspiring, and memorable. We believe in putting our users first and continuously improving the experience.
-        </p>
-      </div>
-
-      <div class="panel" style="margin-top: 16px;">
-        <h2 style="margin:0 0 10px; font-weight: 900;">Our Team</h2>
-
-        <div class="team">
-          <div class="member">
-            <p class="name">John Doe</p>
-            <p class="about-text">John is responsible for overall company direction and strategy.</p>
-            <span class="role">CEO</span>
-          </div>
-          <div class="member">
-            <p class="name">Celina Thomas</p>
-            <p class="about-text">Celina leads the product team and ensures we deliver quality experiences.</p>
-            <span class="role">Team Lead</span>
-          </div>
-          <div class="member">
-            <p class="name">Mike Tysen</p>
-            <p class="about-text">Mike manages delivery and operations to keep everything running smoothly.</p>
-            <span class="role">Delivery Head</span>
-          </div>
+        <div class="member">
+          <p class="name">Celina Thomas</p>
+          <p class="about-text">Leads the product team and ensures quality experiences.</p>
+          <span class="role">Team Lead</span>
+        </div>
+        <div class="member">
+          <p class="name">Mike Tysen</p>
+          <p class="about-text">Manages delivery and operations to keep everything running smoothly.</p>
+          <span class="role">Delivery Head</span>
         </div>
       </div>
-    </section>
-
-    <!-- Task 5: Contact Us -->
-    <section id="contact">
-      <div class="contact-grid">
-        <div>
-          <h1 class="contact-title">Contact Us</h1>
-          <p class="contact-sub">Get in touch</p>
-        </div>
-
-        <form id="contactForm">
-          <label for="name">Name</label>
-          <input id="name" type="text" placeholder="Your name" />
-
-          <label for="email">Email</label>
-          <input id="email" type="email" placeholder="Your email" />
-
-          <label for="message">Message</label>
-          <textarea id="message" placeholder="Your message"></textarea>
-
-          <button class="submit" type="submit">Submit</button>
-        </form>
-      </div>
-    </section>
+    </div>
   </div>
-
-  <script src="travel_recommendation.js"></script>
 </body>
 </html>
