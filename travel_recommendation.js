@@ -184,5 +184,27 @@ async function init() {
     clearResults();
   });
 }
+// ---- SPA Navigation: show Home/About/Contact sections by URL hash ----
+function setActiveSectionFromHash() {
+  const hash = (window.location.hash || "#home").replace("#", "");
+  const page = ["home", "about", "contact"].includes(hash) ? hash : "home";
+
+  document.body.setAttribute("data-page", page);
+
+  ["home", "about", "contact"].forEach((id) => {
+    const section = document.getElementById(id);
+    if (!section) return;
+    section.classList.toggle("active", id === page);
+  });
+
+  // Optional: clear results/messages when leaving Home
+  if (page !== "home") {
+    hideMsg();
+    // keep search UI hidden by CSS (data-page) already
+  }
+}
+
+window.addEventListener("hashchange", setActiveSectionFromHash);
+window.addEventListener("DOMContentLoaded", setActiveSectionFromHash);
 
 init();
